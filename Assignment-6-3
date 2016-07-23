@@ -1,0 +1,114 @@
+# Assignment-6-3
+
+InterfaceDemo.java
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication65;
+
+/**
+ *
+ * @author hp1
+ */
+public interface InterfaceDemo {
+
+    void draw();
+
+    void getArea(int a, int b);
+
+}
+
+
+Rectangle.java
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication65;
+
+/**
+ *
+ * @author hp1
+ */
+public class Rectangle implements InterfaceDemo{
+
+    @Override
+    public void draw() {
+      System.out.println("The shape of rectangle is rectangular");
+    }
+
+    @Override
+    public void getArea(int l,int b) {
+        System.out.println("The area of rectangle is" +(l*b));
+    }
+    
+}
+
+
+
+Triangle.java
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication65;
+
+/**
+ *
+ * @author hp1
+ */
+public class Triangle implements InterfaceDemo {
+
+    @Override
+    public void draw() {
+        System.out.println("The shape of triangle is triangular");
+    }
+
+    @Override
+    public void getArea(int a, int b) {
+        System.out.println("The area of the triangle is " + ((a * b) / 2));
+
+    }
+    
+    
+    
+    
+    
+Main method:
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication65;
+
+/**
+ *
+ * @author hp1
+ */
+public class JavaApplication65 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Rectangle r=new Rectangle();
+        Triangle t=new Triangle();
+        r.draw();
+        r.getArea(2, 4);
+        t.draw();
+        t.getArea(5, 6);
+    }
+    
+}
